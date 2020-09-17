@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft/2019-09/schema#",
+  "title": "General error response schema",
+  "description": "An error response common to all A/344 schemas",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {}
+  },
+  "required": [
+    "code",
+    "message"
+  ]
+}

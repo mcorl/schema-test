@@ -1,0 +1,11 @@
+{
+  "$schema": "../org.test.some-request.json",
+  "jsonrpc": "2.0",
+  "method": "org.test.request",
+  "params": {
+    "sourceURL": "https://foo.com/service1/",
+    "targetURL": "images/",
+    "URLs":["A/big-image1.png","B/big-image2.png","C/big-image3.png"]
+  },
+    "id": 37
+}

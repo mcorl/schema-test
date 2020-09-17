@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft/2019-09/schema#",
+  "title": "A Generic Response Schema",
+  "description": "A Generic Response",
+  "type": "object",
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "enum": [
+        "2.0"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "result": {},
+    "error": {
+      "$ref": "org.test.error-response.json"
+    }
+  },
+  "required": [
+    "jsonrpc",
+    "id"
+  ],
+  "oneOf": [
+    {
+      "required": [
+        "result"
+      ]
+    },
+    {
+      "required": [
+        "error"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft/2019-09/schema#",
+    "title": "Some Request API",
+    "description": "Some Request API",
+    "type": "object",
+    "properties": {
+      "jsonrpc": {
+        "type": "string",
+        "enum": [ "2.0" ]
+	  },
+      "id": {
+        "type": "integer"
+      },
+      "method": {
+        "type": "string",
+        "enum": ["org.test.request"]
+      },
+      "params":{
+        "type": "object",
+        "properties": {
+          "sourceURL": {"type": "string", "format": "uri"},
+          "targetURL": {"type": "string", "format": "uri" },
+          "URLs": {"type": "array", "items": {"type": "string", "format":"uri"}},
+        },
+        "required": ["URLs"]
+	  }
+	},
+	"required": [ "jsonrpc", "id", "method", "params" ] 
+}
